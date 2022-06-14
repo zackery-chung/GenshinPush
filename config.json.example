@@ -1,0 +1,13 @@
+{
+  "cookie": "",
+  "role_id": "101859124",
+  "server": "cn_gf01",
+  "wechat_message": {
+    "appid": "",
+    "appsecret": "",
+    "openid": "",
+    "template_id": {
+      "dailynote": ""
+    }
+  }
+}
