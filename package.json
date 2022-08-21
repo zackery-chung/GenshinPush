@@ -11,7 +11,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "ts-node ."
+    "start": "ts-node .",
+    "start-parking": "ts-node parking"
   },
   "author": "",
   "license": "ISC"

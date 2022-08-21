@@ -41,6 +41,22 @@ export class Wechat {
     })
   }
 
+  pushParkingNote(result: string, touser: string) {
+    axios.post(BASE_URL + '/message/template/send', {
+      touser,
+      template_id: 'dG921oOdgpeHqfFdGRM_qiLKLaBQ-I4RY7kAopUmQfQ',
+      data: {
+        result: {
+          value: result
+        },
+      }
+    }, {
+      params: {
+        access_token: this.access_token
+      }
+    })
+  }
+
   static async getAccessTokenByAppSecret(appid: string, secret: string) {
     let wechatToken = { access_token: '', expiredTime: 0 }
     try {

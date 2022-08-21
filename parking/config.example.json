@@ -1,0 +1,14 @@
+{
+  "template_id": "",
+  "wechat_message": {
+    "appid": "",
+    "appsecret": ""
+  },
+  "tasks": [
+    {
+      "uid": "",
+      "plateNo": "",
+      "notifyUser": ""
+    }
+  ]
+}
