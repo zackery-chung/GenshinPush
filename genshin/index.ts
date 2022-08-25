@@ -1,5 +1,5 @@
-import { GenshinClient } from './providers/genshin';
-import { Wechat } from './providers/wechat';
+import { GenshinClient } from '../providers/genshin';
+import { Wechat } from '../providers/wechat';
 
 ;(async () => {
     const config = require("./config.json")

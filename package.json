@@ -11,8 +11,10 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "ts-node .",
-    "start-parking": "ts-node parking"
+    "start": "ts-node genshin",
+    "start-parking": "ts-node parking",
+    "build:genshin": "tsc genshin",
+    "build:parking": "tsc parking"
   },
   "author": "",
   "license": "ISC"

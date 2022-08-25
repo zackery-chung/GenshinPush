@@ -1,6 +1,6 @@
 import axios from "axios"
 import { writeFileSync } from "fs";
-import { DailyNote } from "../type";
+import { DailyNote } from "../genshin/type";
 
 const BASE_URL = 'https://api.weixin.qq.com/cgi-bin'
 // 
