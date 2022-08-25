@@ -1,7 +1,19 @@
 import axios, { Axios } from "axios"
 
 import crypto from 'crypto';
-import { DailyNote } from "../type";
+
+export type DailyNote = {
+  current_resin: number
+  current_home_coin: number
+  transformer: {
+    recovery_time: {
+      Day: number
+      Hour: number
+      Minute: number
+      Second: number
+    }
+  }
+}
 
 const md5 = (str: string) => crypto.createHash('md5').update(str).digest('hex');
 
@@ -47,24 +59,24 @@ export class GenshinClient {
 
 
   async getDailyNote(role_id: string, server: string) {
-  const response = await this.request.get<{retcode: number, data: DailyNote}>('/game_record/app/genshin/api/dailyNote', {
-      params: {
-          server,
-          role_id
-      }
-  })
+    const response = await this.request.get<{retcode: number, data: DailyNote}>('/game_record/app/genshin/api/dailyNote', {
+        params: {
+            server,
+            role_id
+        }
+    })
 
-  return response.data
-}
+    return response.data
+  }
 
-async getGameRecordCard(uid: number) {
-  const response = await this.request.get('/game_record/app/card/wapi/getGameRecordCard', {
-      params: {
-          uid
-      }
-  })
+  async getGameRecordCard(uid: number) {
+    const response = await this.request.get('/game_record/app/card/wapi/getGameRecordCard', {
+        params: {
+            uid
+        }
+    })
 
-  return response.data
-}
+    return response.data
+  }
 
 }
